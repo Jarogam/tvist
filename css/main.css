@@ -10603,7 +10603,8 @@ header .menu .menu-mobile a:last-child:hover {
 }
 
 .catalog .catalog__showerscreen--description .catalog__showerscreen--description__bg {
-    margin-bottom: 35px
+    margin-bottom: 35px;
+    position: relative;
 }
 
 .catalog .catalog__showerscreen--description .catalog__showerscreen--description__bg::after {
@@ -12021,19 +12022,7 @@ header .menu .menu-mobile a:last-child:hover {
     }
 }
 
-@media (max-width: 720px) {
-    main .home h1 {
-        font-size:27px
-    }
-    main .home h1 span{
-        font-size: 16px;
-    }
-    main .home h1 span:last-child{
-        font-size: 14px;
-        margin-top: 10px;
-    }
 
-}
 
 @media (max-width: 786px) {
     main .catalog .catalog__showercurtain--swiper::before,main .catalog .catalog__showerdoor--swiper::before,main .catalog .catalog__showerscreen--swiper::after,main .requestform form::after {
@@ -12093,7 +12082,7 @@ header .menu .menu-mobile a:last-child:hover {
     }
     .catalog .catalog__showerdoor--description{
         padding: 0px;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 0px;
     }
     .catalog .shower-curtain{
@@ -12115,22 +12104,23 @@ header .menu .menu-mobile a:last-child:hover {
     }
     .catalog .catalog__showerdoor--description .catalog__showerdoor--description__bg::before{
         left: 0px;
-        width: 100%
+        width: 100%;
+        height: 100px;
+        top: 5px;
     }
     .catalog .catalog__showerscreen--description .catalog__showerscreen--description__bg::after{
         width: 100%;
-        height: 115px;
+        height: 110px;
         right: 0;
-        top: 20px;
+        top: 10px;
     }
     .catalog .catalog__showercurtain--description .catalog__showercurtain--description__bg::before{
         left: 0;
         top: -0px;
         width: 100%;
-        height: 120px;
+        height: 150px;
     }
     .catalog .catalog__showercurtain--description .catalog__showercurtain--description__bg--size{
-        margin-bottom: 15px;
         margin-top: 0px;
     }
     .german-fittings{
@@ -12146,6 +12136,15 @@ header .menu .menu-mobile a:last-child:hover {
     }
     .german-fittings h2::after{
         margin-left: 44%;
+    }
+    .catalog .catalog__showercurtain--description .catalog__showercurtain--description__bg--name .catalog__showercurtain--description__bg--name__wrapper{
+        padding-left: 0px;
+    }
+    .catalog .catalog__showerscreen--description .catalog__showerscreen--description__bg{
+        margin-bottom: 0px;
+    }
+    main .catalog .catalog__showerdoor--description .catalog__showerdoor--description__bg--name .catalog__showerdoor--description__bg--name__wrapper{
+        display: block;
     }
     .work{
         padding-top: 30px;
@@ -12243,12 +12242,16 @@ header .menu .menu-mobile a:last-child:hover {
         left:130px!important
     }
 
-    main .catalog .catalog__showercurtain--description .catalog__showercurtain--description__bg::before,main .catalog .catalog__showerdoor--description .catalog__showerdoor--description__bg::before,main .catalog .catalog__showerscreen--description .catalog__showerscreen--description__bg::after {
-        width: 100%;
-        left: 0;
-        right: 0
+    main .home h1 {
+        font-size:27px
     }
-
+    main .home h1 span{
+        font-size: 16px;
+    }
+    main .home h1 span:last-child{
+        font-size: 14px;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 1860px) {
