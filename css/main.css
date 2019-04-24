@@ -9903,7 +9903,7 @@ header .menu .menu-mobile a:last-child:hover {
 
 .home {
     background: url(../img/main.jpg) center/cover no-repeat;
-    padding-top: 160px;
+    padding-top: 250px;
     padding-bottom: 130px
 }
 
@@ -10377,32 +10377,53 @@ header .menu .menu-mobile a:last-child:hover {
     height: 100%
 }
 
-.catalog .swiper-navigation {
+.swiper-navigation {
     position: absolute;
-    right: 0;
     bottom: 0;
-    background: #fff;
-    z-index: 11;
-    height: 50px;
-    width: 120px;
-    text-align: center
+    left: 0;
+    right: auto;
+    z-index: 1;
+    display: flex;
 }
 
-.catalog .swiper-navigation .swiper-button-next,.catalog .swiper-navigation .swiper-button-prev {
-    width: 15px;
-    background: 0 0;
+.swiper-navigation .swiper-button-next,
+.swiper-navigation .swiper-button-prev {
     position: static;
-    height: 30px;
-    display: inline-block;
-    outline: none;
+    width: 60px;
+    height: 50px;
+    margin: 0;
+    background: #fff;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
 }
-.catalog .swiper-navigation .swiper-button-next img{    
-    padding-top: 2px;
+
+.swiper-navigation .swiper-button-next:hover,
+.swiper-navigation .swiper-button-prev:hover {
+    background: #f5f5f5;
 }
-.catalog .swiper-navigation .swiper-button-prev {
+
+.swiper-navigation .swiper-button-prev {
     transform: rotate(180deg);
-    margin-right: 30px;
-    margin-top: 13px
+}
+
+.swiper-navigation .swiper-button-next:focus,
+.swiper-navigation .swiper-button-prev:focus {
+    outline: none;
+    background: #f5f5f5;
+}
+
+.swiper-navigation .swiper-button-next img,
+.swiper-navigation .swiper-button-prev img {
+    width: 12px;
+    height: auto;
+}
+
+.swiper-showerdoor .swiper-navigation {
+    left: auto;
+    right: 0;
 }
 
 .catalog .swiper-slide {
@@ -11459,9 +11480,13 @@ header .menu .menu-mobile a:last-child:hover {
 
 .requestform form .check__input {
     position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .requestform form .check__box {
@@ -11563,34 +11588,10 @@ header .menu .menu-mobile a:last-child:hover {
     max-height: 630px
 }
 
-.ourwork .ourwork__swiper .swiper-navigation {
-    position: absolute;
+.ourwork__swiper .swiper-navigation {
     left: 275px;
-    bottom: 0;
-    background: #fff;
-    z-index: 11;
-    height: 50px;
-    width: 120px;
-    text-align: center
 }
 
-.ourwork .ourwork__swiper .swiper-navigation .swiper-button-next,.ourwork .ourwork__swiper .swiper-navigation .swiper-button-prev {
-    width: 15px;
-    background: 0 0;
-    position: static;
-    height: 30px;
-    display: inline-block;
-    outline:none;
-}
-
-.ourwork .ourwork__swiper .swiper-navigation .swiper-button-prev {
-    transform: rotate(180deg);
-    margin-right: 30px;
-    margin-top: 13px
-}
-.ourwork .ourwork__swiper .swiper-navigation .swiper-button-next img{
-    padding-top: 2px;
-}
 .ourwork .ourwork__swiper::before {
     content: "";
     background: url(../img/dotted.png) no-repeat;
@@ -11677,31 +11678,9 @@ header .menu .menu-mobile a:last-child:hover {
 }
 
 .reviews .swiper-navigation {
-    position: absolute;
     left: 200px;
     top: 0;
-    background: #fff;
-    z-index: 11;
-    height: 50px;
-    width: 120px;
-    text-align: center
-}
-
-.reviews .swiper-navigation .swiper-button-next,.reviews .swiper-navigation .swiper-button-prev {
-    width: 15px;
-    background: 0 0;
-    position: static;
-    height: 30px;
-    display: inline-block;
-    padding-top: 1px;
-    outline:none;
-
-}
-
-.reviews .swiper-navigation .swiper-button-prev {
-    transform: rotate(180deg);
-    margin-right: 30px;
-    margin-top: 13px
+    bottom: auto;
 }
 
 .reviews .reviews-swiper::after {
@@ -11859,6 +11838,17 @@ header .menu .menu-mobile a:last-child:hover {
         padding-top: 15px;
     }
 }
+
+@media (max-width: 1860px) {
+    main .ourwork .ourwork__swiper .swiper-container {
+        width:100%
+    }
+
+    .ourwork__swiper .swiper-navigation {
+        left: 165px
+    }
+}
+
 @media (max-width: 1200px) {
     .catalog h2 {
         font-size:35px
@@ -11870,7 +11860,6 @@ header .menu .menu-mobile a:last-child:hover {
 
     main .home {
         padding-bottom: 60px;
-        padding-top: 100px
     }
 
     main .home h1 {
@@ -11911,9 +11900,9 @@ header .menu .menu-mobile a:last-child:hover {
         float: none
     }
 
-    main .ourwork .ourwork__swiper .swiper-navigation {
+    /* main .ourwork .ourwork__swiper .swiper-navigation {
         left: 115px
-    }
+    } */
 
     main .reviews .reviews-swiper::after {
         top: -180px
@@ -11924,9 +11913,19 @@ header .menu .menu-mobile a:last-child:hover {
     }
 }
 
+@media only screen and (max-width: 1200px ) {
+    .ourwork__swiper .swiper-navigation {
+        left: 157px;
+    }
+}
+
 @media (max-width: 992px) {
     header{
         padding: 5px 0px
+    }
+
+    main .home {
+        padding-top: 200px;
     }
     .menu-mail,.menu-mobile,.menu-schedule,header .menu-text {
         display:none
@@ -11947,8 +11946,8 @@ header .menu .menu-mobile a:last-child:hover {
         top: 15px
     }
 
-    main .ourwork .ourwork__swiper .swiper-navigation {
-        left: 80px!important
+    .ourwork__swiper .swiper-navigation {
+        left: 190px
     }
 
     main .catalog .catalog__showerscreen--swiper::after {
@@ -12017,9 +12016,9 @@ header .menu .menu-mobile a:last-child:hover {
         display: none
     }
 
-    main .ourwork .ourwork__swiper .swiper-navigation {
+    /* main .ourwork .ourwork__swiper .swiper-navigation {
         left: 190px!important
-    }
+    } */
 }
 
 
@@ -12059,11 +12058,11 @@ header .menu .menu-mobile a:last-child:hover {
     main .german-fittings .german-fittings__icon-block::after,main .requestform form::before {
         display:none
     }
-    main .ourwork .ourwork__swiper .swiper-navigation {
+    /* main .ourwork .ourwork__swiper .swiper-navigation {
         left: 210px!important;
-    }
+    } */
     main .home{
-        padding: 110px 0px 30px 0px;
+        padding: 160px 0px 50px;
     }
 
 
@@ -12213,8 +12212,14 @@ header .menu .menu-mobile a:last-child:hover {
     main .catalog__showerdoor--description{
         text-align: center;
     }
-    main .ourwork .ourwork__swiper .swiper-navigation {
-        left: 120px !important;
+    .ourwork__swiper .swiper-navigation {
+        left: auto;
+        right: 0;
+    }
+    .ourwork .ourwork__swiper .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active img {
+        max-width: none;
+        max-height: auto;
+        width: 100%;
     }
     main .reviews .reviews-swiper::after {
         left: 35%;
@@ -12238,9 +12243,9 @@ header .menu .menu-mobile a:last-child:hover {
 
 }
 @media (max-width: 720px) {
-    main .ourwork .ourwork__swiper .swiper-navigation {
+    /* main .ourwork .ourwork__swiper .swiper-navigation {
         left:130px!important
-    }
+    } */
 
     main .home h1 {
         font-size:27px
@@ -12254,15 +12259,7 @@ header .menu .menu-mobile a:last-child:hover {
     }
 }
 
-@media (max-width: 1860px) {
-    main .ourwork .ourwork__swiper .swiper-container {
-        width:100%
-    }
 
-    main .ourwork .ourwork__swiper .swiper-navigation {
-        left: 175px
-    }
-}
 
 @media (max-width: 1216px) {
     main .requestform form::after {
