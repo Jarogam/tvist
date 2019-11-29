@@ -7,7 +7,7 @@ $to = "bonackiy.dev@gmail.com";
 $subject = "Форма отправки сообщений с сайта Твист";
     
 //sender
-$from = "Elena357910@yandex.com"; 
+$from = "bonackiy.dev@gmail.com"; 
 $fromName = 'Tvist';
 
 //email subject
