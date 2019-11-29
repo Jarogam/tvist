@@ -1,7 +1,7 @@
 <?php
 //recipient
 
-$to = "Elena357910@yandex.com";  
+$to = "bonackiy.dev@gmail.com";  
 
 
 $subject = "Форма отправки сообщений с сайта Твист";
